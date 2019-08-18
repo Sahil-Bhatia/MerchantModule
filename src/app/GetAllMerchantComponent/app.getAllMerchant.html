@@ -1,0 +1,48 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>   
+    <title>
+        Merchants List
+    </title>
+</head>
+<section>
+    <div class="container-fluid w-80 mt-5" >
+    <div class="w-80 mx-auto">
+        <div class="w-80 mx-auto">Merchants List</div>
+    <table border="1" class="table table-bordered table-hover ">
+        <tr>
+            <th>Merchant Id</th>
+            <th>Merchant First Name</th>
+            <th>Merchant Last Name</th>
+            <th>Company</th>
+            <th>EmailId</th>
+            <th>Merchant MobileNo.</th>
+            <th>Password</th>
+            <th>Photo</th>
+            <th>Rating</th>
+            <th>Status</th>
+            <th>Action</th>
+            
+        </tr>
+        <tr *ngFor="let m of merchantList; let i = index ">
+            <td>{{m.merchantId}}</td>
+            <td>{{m.firstName}}</td> 
+            <td>{{m.lastName}}</td>
+            <td>{{m.company}}</td>
+            <td>{{m.emailid}}</td>
+            <td>{{m.mobileno}}</td> 
+            <td>{{m.password}}</td>
+            <td>{{m.photo}}</td>
+            <td>{{m.rating}}</td> 
+            <td>{{m.status}}</td>
+            <td><input type="button" value="Delete" (click)="deleteMerchant(m)"></td>
+        
+        </tr>
+    </table>     
+    </div>
+    </div>
+</section>
